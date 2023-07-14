@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const markdown = require('markdown-it');
 const matter = require('gray-matter');
-const fs = require('fs'
+const fs = require('fs');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
