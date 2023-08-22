@@ -11,12 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
-    "pug": "*",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
     "express": "*",
-    "gray-matter": "*",
-    "markdown-it": "*",
-    "rtmp-server": "*",
-    "nedb":"*"
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1",
+    "marked": "^7.0.4",
+    "nedb": "*",
+    "rtmp-server": "*"
   }
-  
 }

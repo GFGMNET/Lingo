@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('header'); %>
+</header>
+
+<main>
+  <div class="wasp">
+    <div class="mrn">
+      <%- include('menuright'); %>
+    </div>
+    <div class="content">
+      
+      <% for(let i = 0; i < l_data.length; i++) { %>
+      <div class="card" style="width: 18rem; float: left; margin-right: 10px; margin-top:10px;height: 15rem;">
+        <img src="<%= l_data[i].img %>" class="card-img-top" style="width: 18rem; height: 6rem;"  alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= l_data[i].title %></h5>
+          <p class="card-text"><%= l_data[i].summary %></p> 
+          <div id="app">
+          <el-button @click="getMore(l_data[i]._id)">More</el-button>      
+          <el-dialog :visible.sync="visible" title="<%= l_data[i].title %>" width="90%">
+            
+            <p><%= l_data[i].body %></p>     
+          </el-dialog>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  
+  </div>
+</main>
+
+
+
+
+<footer>
+  <%- include('footer'); %>
+</footer>
+
+</body>
+</html>
